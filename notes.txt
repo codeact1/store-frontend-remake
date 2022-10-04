@@ -1,0 +1,43 @@
+#run project
+npm start
+
+#to change directory
+cd
+
+# git configuration
+
+# initialize project
+git init
+
+# add a remote url(server)
+git remote add origin <url>
+
+# run project
+npm start
+
+# to change location
+cd <drag folder here>
+
+# git configuration
+
+# initialized a repo/project
+git init 
+
+
+# add a remote url (server)
+git remote add origin  <URL>
+
+# add the files that should be copied (all)
+git add .
+
+
+# create local copy
+git commit -m "ANY MESSAGE"
+
+
+# push to server
+# first time
+git push -u origin master/main
+
+# future times
+git push
