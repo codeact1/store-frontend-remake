@@ -2,6 +2,12 @@
     display :inline-block;
     width:270px;
     height: 300px;
-    border: 1px solid gray;
-    image:
+    border: 2px solid gray;
+    text-align: center;
+    padding: 10px;
+}
+
+.images {
+ margin-top: 20px;
+ margin-left: 30px;
 }

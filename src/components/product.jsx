@@ -1,19 +1,18 @@
-import '../components/product.css'
-import QuantityPicker from './quantitypicker';
+import "../components/product.css";
+import QuantityPicker from "./quantitypicker";
 
+const Product = (props) => {
+  return (
+    <div className="product">
+      <img className="images"
+        src={"/images/" + props.data.image} width="193" height="130" alt=""
+      />
 
-const Product = () => {
-    return(
-        <div className="product">
-
-        <img src="https://i.picsum.photos/id/1004/200/300.jpg?hmac=U8xLjv1wDsnhRH90oqnEvk2hvspq7UPzpU8Z9TtIxZM" alt="" />
-
-            <h5>Title of the Product</h5>
-            <label>Total</label>
-            <label>Total</label>
-            <QuantityPicker />
-        </div>
-    );
-
-}
+      <h5>{props.data.title}</h5>
+      <label className="total">Total</label>
+      <label className="price">Price</label>
+      <QuantityPicker />
+    </div>
+  );
+};
 export default Product;

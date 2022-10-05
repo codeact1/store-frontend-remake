@@ -9,9 +9,9 @@ import "bootstrap/dist/js/bootstrap.min.js";
 
 function App() {
   return (
-    <div>
+    <div className="App">
       <NavBar />
-      <h1>Hello React!!</h1>
+      <h1>Checkout our Catalog of Awesome Home Gym Equipment!!!</h1>
 
       <Catalog />
       
