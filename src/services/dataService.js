@@ -22,14 +22,14 @@ const catalog = [
       },
       {
         _id: '3',
-        title: 'Weight Set',
+        title: 'Smart-Weight Set',
         price: '149.99',
         category: 'Equipment',
         image: 'smart weighset.webp',
       },
       {
         _id: '4',
-        title: 'Bands',
+        title: 'Tension Bands',
         price: '149.99',
         category: 'Equipment',
         image:'Band-Set.webp',
@@ -43,7 +43,7 @@ const catalog = [
       },
       {
         _id: '6',
-        title: 'Sauna',
+        title: '2-Person Sauna',
         price: '149.99',
         category: 'Equipment',
         image: 'sauna.jpg',
