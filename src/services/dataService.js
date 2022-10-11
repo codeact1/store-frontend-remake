@@ -1,70 +1,63 @@
 const catalog = [
-    {
-        _id: '1',
-        title: 'Treadmill',
-        price: '129.99',
-        category: 'Equipment',
-        image: 'tread.jpg',
-      },
-      {
-        _id: '2',
-        title: 'Up-right Bike',
-        price: '149.99',
-        category: 'Equipment',
-        image: 'bike.webp',
-      },
-      {
-        _id: '2',
-        title: 'Ergonomical Bike',
-        price: '149.99',
-        category: 'Equipment',
-        image: 'ergobike.jpg',
-      },
-      {
-        _id: '3',
-        title: 'Smart-Weight Set',
-        price: '149.99',
-        category: 'Equipment',
-        image: 'smart weighset.webp',
-      },
-      {
-        _id: '4',
-        title: 'Tension Bands',
-        price: '149.99',
-        category: 'Equipment',
-        image:'Band-Set.webp',
-      },
-      {
-        _id: '5',
-        title: 'Massage Chair',
-        price: '149.99',
-        category: 'Equipment',
-        image: 'massagechair.webp',
-      },
-      {
-        _id: '6',
-        title: '2-Person Sauna',
-        price: '149.99',
-        category: 'Equipment',
-        image: 'sauna.jpg',
-      }, 
+  {
+    _id: "10",
+    title: "Treadmill",
+    price: "189.99",
+    category: "Equipment",
+    image: "tread.jpg",
+  },
+  {
+    _id: "20",
+    title: "Up-right Bike",
+    price: "129.99",
+    category: "Equipment",
+    image: "bike.webp",
+  },
+  {
+    _id: "30",
+    title: "Ergonomical Bike",
+    price: "149.99",
+    category: "Equipment",
+    image: "ergobike.jpg",
+  },
+  {
+    _id: "40",
+    title: "Smart-Weight Set",
+    price: "99.99",
+    category: "Equipment",
+    image: "smart weighset.webp",
+  },
+  {
+    _id: "50",
+    title: "Tension Bands",
+    price: "24.99",
+    category: "Equipment",
+    image: "Band-Set.webp",
+  },
+  {
+    _id: "60",
+    title: "Massage Chair",
+    price: "549.99",
+    category: "Equipment",
+    image: "massagechair.webp",
+  },
+  {
+    _id: "70",
+    title: "2-Person Sauna",
+    price: "749.99",
+    category: "Equipment",
+    image: "sauna.jpg",
+  },
 ];
 
 class Dataservice {
+  getCatalog() {
+    return catalog;
+    // ToDO: call the server to get the data
+  }
 
-    getCatalog(){
-        return catalog;
-        // ToDO: call the server to get the data
+  saveOrder() {}
 
-    }
-
-    saveOrder(){
-
-
-    }
-
-    validateCouponCode(){
-
-    }
+  validateCouponCode() {}
 }
 export default Dataservice;

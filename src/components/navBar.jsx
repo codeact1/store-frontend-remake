@@ -3,10 +3,10 @@ import './navBar.css';
 
 function NavBar(){
     return(
-        <nav className="navbar navbar-expand-lg bg-light">
+        <nav className="navbar navbar-expand-lg bg-dark">
     <div className="container-fluid">
         <a className="navbar-brand" href="/#">
-       The Fitness Store
+       Fitness Equipment Store
         </a>
         <button
           className="navbar-toggler"
