@@ -1,0 +1,15 @@
+.footer {
+    padding: 20px 10px 10px 10px;
+    background-color: black;
+    border-top: 1px solid black;
+    display: flexbox;
+    color: white;
+}
+
+h2{
+    text-align: right; 
+}
+
+h3 {
+    text-align: left;
+}
