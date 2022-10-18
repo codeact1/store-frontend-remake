@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
 import NavBar from "./components/navBar";
-import Footer from "./components/footer"
+import Footer from "./components/footer";
 import Catalog from "./pages/catalog";
+import Home from "./pages/home";
+import About from "./pages/about";
+import Admin from "./pages/admin";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 function App() {
   return (
-    <div className="App">
-      <NavBar />
-      <h1>Checkout our Catalog of Awesome Home Gym Equipment!!!</h1>
+    <browserRouter>
+      <div className="App">
+        <NavBar />
 
-      <Catalog />
-      
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/catalog" element={<Catalog />} />
+          <Route path="/about" element={<About />} />
 
-      <Footer />
-    </div>
-    
+          <Route path="/admin" element={<Admin />} />
+        </Routes>
 
+        <Footer />
+      </div>
+    </browserRouter>
   );
 }
 

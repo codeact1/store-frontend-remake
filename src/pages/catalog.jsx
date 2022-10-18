@@ -17,15 +17,14 @@ const Catalog = () => {
 
   return (
     <div className="catalog">
-      
+      <h1>Checkout our Catalog of Awesome Home Gym Equipment!!!</h1>
       <div className="list-container">
-        {products.map(prod  => 
+        {products.map((prod) => (
           <Product key={prod.id} data={prod} />
-        )}
+        ))}
       </div>
     </div>
   );
-
-}
+};
 
 export default Catalog;
