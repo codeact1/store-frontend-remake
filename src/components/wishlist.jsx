@@ -1,19 +1,34 @@
 import { useState } from "react";
 
-//const Wishlist = () => {
-//const
-// const
-//}
+const Wishlist = () => {
+  const [text, setText] = useState("");
+  const [list, setList] = useState([]);
 
-//return (
-//<div className="list">
+  const handleTextChange = (e) => {
+    console.log(e.target.value);
+    setText(e.target.value);
+  };
+  const addToList = () => {
+    let copy = list;
+    copy.push(text);
+    setList(copy);
+    setText("");
+    console.log(list);
+  };
 
-// <div className="form">
-//<input onChange=
-
-// </div>
-
-// </div>
-//)
-
-//export default wishlist;
+  return (
+    <div className="list">
+      <h2>My Wish List</h2>
+      <div className="form">
+        <input type="text" onChange={handleTextChange} value={text} />
+        <button onClick={addToList}>Add</button>
+      </div>
+      <ul>
+        {list.map((t) => (
+          <li>{t}</li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+export default Wishlist;

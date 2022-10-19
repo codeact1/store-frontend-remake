@@ -3,6 +3,7 @@ import "../components/quantitypicker.jsx";
 import Product from "../components/product";
 import { useEffect, useState } from "react";
 import Dataservice from "../services/dataService";
+import Wishlist from "../components/wishlist";
 
 const Catalog = () => {
   const [products, setProducts] = useState([]);
@@ -23,6 +24,7 @@ const Catalog = () => {
           <Product key={prod.id} data={prod} />
         ))}
       </div>
+      <Wishlist />
     </div>
   );
 };

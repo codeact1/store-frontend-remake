@@ -4,6 +4,7 @@ import NavBar from "./components/navBar";
 import Footer from "./components/footer";
 import Catalog from "./pages/catalog";
 import Home from "./pages/home";
+import Wishlist from "./components/wishlist";
 import About from "./pages/about";
 import Admin from "./pages/admin";
 
@@ -14,7 +15,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <browserRouter>
+    <BrowserRouter>
       <div className="App">
         <NavBar />
 
@@ -22,13 +23,13 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/catalog" element={<Catalog />} />
           <Route path="/about" element={<About />} />
-
+          <Route path="/wish" element={<Wishlist />} />
           <Route path="/admin" element={<Admin />} />
         </Routes>
 
         <Footer />
       </div>
-    </browserRouter>
+    </BrowserRouter>
   );
 }
 

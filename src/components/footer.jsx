@@ -1,14 +1,10 @@
-import './footer.css';
+import "./footer.css";
 
-
-function Footer(){
-return (
+function Footer() {
+  return (
     <div className="footer">
-           <h2> 2022</h2>
-           <h3>Chaka</h3>
-        
+      <h3>Chaka 2022</h3>
     </div>
-);
-
+  );
 }
-export default Footer
+export default Footer;
