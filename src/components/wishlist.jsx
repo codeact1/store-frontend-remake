@@ -18,7 +18,7 @@ const Wishlist = () => {
 
   return (
     <div className="list">
-      <h2>My Wish List</h2>
+      <h4>My Wish List</h4>
       <div className="form">
         <input type="text" onChange={handleTextChange} value={text} />
         <button onClick={addToList}>Add</button>

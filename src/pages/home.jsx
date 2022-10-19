@@ -1,12 +1,12 @@
-//import css
+import "./home.css";
 
 const Home = () => {
   return (
     <div className="home">
-      <h1>Home Page</h1>
-      <img src="/images/homepic.jpg" alt="" />
+      <img src="/images/pexels.jpg" alt="" />
+      <div className="center"> Workout on the Next Level</div>
 
-      <button>See Catalog</button>
+      <button className="btn btn-outline-success">See Our Catalog</button>
     </div>
   );
 };

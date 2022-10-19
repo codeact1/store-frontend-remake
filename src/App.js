@@ -4,7 +4,7 @@ import NavBar from "./components/navBar";
 import Footer from "./components/footer";
 import Catalog from "./pages/catalog";
 import Home from "./pages/home";
-import Wishlist from "./components/wishlist";
+import Wishlist from "./pages/wishlist";
 import About from "./pages/about";
 import Admin from "./pages/admin";
 
@@ -23,7 +23,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/catalog" element={<Catalog />} />
           <Route path="/about" element={<About />} />
-          <Route path="/wish" element={<Wishlist />} />
+          <Route path="/wishlist" element={<Wishlist />} />
           <Route path="/admin" element={<Admin />} />
         </Routes>
 
