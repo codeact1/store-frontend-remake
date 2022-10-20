@@ -1,12 +1,12 @@
 import "./home.css";
-
+//import {Link}
 const Home = () => {
   return (
     <div className="home">
       <img src="/images/pexels.jpg" alt="" />
       <div className="center"> Workout on the Next Level</div>
 
-      <button className="btn btn-outline-success">See Our Catalog</button>
+      <link className="btn btn-outline-success">See Our Catalog</link>
     </div>
   );
 };
