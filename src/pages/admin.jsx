@@ -72,7 +72,6 @@ const Admin = () => {
               />
             </div>
             <div className="my-control">
-              <img></img>
               <button className="btn btn-primary" onClick={saveProduct}>
                 Add
               </button>

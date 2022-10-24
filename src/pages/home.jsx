@@ -1,5 +1,5 @@
 import "./home.css";
-//import {Link}
+
 const Home = () => {
   return (
     <div className="home">
