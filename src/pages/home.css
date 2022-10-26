@@ -1,6 +1,6 @@
 
 
-img{
+.home-pageimg{
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -13,7 +13,7 @@ img{
 }
 .center{
     position: absolute;
-    top: 35%;
+    top: 15%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 60px;

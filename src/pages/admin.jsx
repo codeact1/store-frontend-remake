@@ -50,46 +50,38 @@ const Admin = () => {
   return (
     <div className="admin">
       <h1>Admin Page</h1>
-      <div className="container">
+      <div className="form-group">
         <div className="products">
-          <h2>Products</h2>
-          <div className="form-group">
-            <div className="my-control">
-              <label>Title:</label>
-              <input name="title" type="text" onChange={handleProductChange} />
-            </div>
-            <div className="my-control">
-              <label>Price:</label>
-              <input name="price" type="text" onChange={handleProductChange} />
-            </div>
-            <div className="my-control">
-              <label>Category:</label>
-              <input
-                name="category"
-                type="text"
-                onChange={handleProductChange}
-              />
-            </div>
-            <div className="my-control">
-              <button className="btn btn-primary" onClick={saveProduct}>
-                Add
-              </button>
-            </div>
-            <div>
-              <ul>
-                {allProducts.map((p) => (
-                  <li key={p.title}>
-                    {p.title} - {p.category} - ${p.price}
-                  </li>
-                ))}
-              </ul>
-            </div>
+          <h3>Products</h3>
+          <div>
+            <label>Title:</label>
+            <input name="title" type="text" onChange={handleProductChange} />
+          </div>
+          <div>
+            <label>Price:</label>
+            <input name="price" type="text" onChange={handleProductChange} />
+          </div>
+          <div>
+            <label>Category:</label>
+            <input name="category" type="text" onChange={handleProductChange} />
+          </div>
+          <div>
+            <button className="btn btn-primary" onClick={saveProduct}>
+              Add
+            </button>
+          </div>
+          <div>
+            <ul>
+              {allProducts.map((p) => (
+                <li key={p.title}>
+                  {p.title} - {p.category} - ${p.price}
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
-      </div>
 
-      <div className="discounts">
-        <section className="sec-discounts">
+        <div className="discounts">
           <h3>Discounts</h3>
           <div>
             <label>Code:</label>
@@ -98,9 +90,11 @@ const Admin = () => {
           <div>
             <label>Discount:</label>
             <input name="discount" onChange={handleCouponChange} type="text" />
-            <button className="btn btn-primary" onClick={saveCoupon}>
-              Save
-            </button>
+            <div>
+              <button className="btn btn-primary" onClick={saveCoupon}>
+                Save
+              </button>
+            </div>
           </div>
           <ul>
             {allCoupons.map((c) => (
@@ -109,7 +103,7 @@ const Admin = () => {
               </li>
             ))}
           </ul>
-        </section>
+        </div>
       </div>
     </div>
   );

@@ -1,8 +1,10 @@
+import "./about.css";
+
 const About = () => {
   return (
     <div className="about">
-      <h1>About Page</h1>
-      <img src="/images/pexels.jpg" alt="" />
+      <img className="about-img" src="/images/pexels.jpg" alt="" />
+      <div className="title-line">About Page</div>
     </div>
   );
 };

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "../components/wishlist.css";
 
 const Wishlist = () => {
   const [text, setText] = useState("");

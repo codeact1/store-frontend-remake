@@ -1,0 +1,21 @@
+
+.about-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about{
+    position: relative;
+    text-align: left;
+    color: white;
+}
+
+.title-line{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 60px;
+   
+} 

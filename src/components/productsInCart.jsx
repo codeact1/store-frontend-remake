@@ -7,7 +7,7 @@ const ProductsInCart = (props) => {
 
   return (
     <div className="products-in">
-      <img src={"/images/" + props.data.image} alt="" />
+      <img className="cart-img" src={"/images/" + props.data.image} alt="" />
 
       <div className="product-info">
         <h5>{props.data.title}</h5>

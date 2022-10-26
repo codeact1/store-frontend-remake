@@ -18,7 +18,7 @@ const Catalog = () => {
 
   return (
     <div className="catalog">
-      <h1>The Best Equipment for the Best Workout Ever</h1>
+      <h1>Next Level Equipment for Next Level Workout</h1>
       <div className="list-container">
         {products.map((prod) => (
           <Product key={prod.id} data={prod} />
