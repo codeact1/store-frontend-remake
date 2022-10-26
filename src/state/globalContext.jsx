@@ -6,8 +6,21 @@ const GlobalContext = (props) => {
   const [user, setUser] = useState({ id: 1, name: "John" });
 
   const addToCart = (prod) => {
-    let copy = [...cart, prod];
-    setCart(copy);
+    let found = false;
+    let newCart = [...cart];
+    for (let i = 0; i < newCart.length; i++) {
+      let item = newCart[i];
+      if (item._id === prod._id) {
+        //found it
+        item.quantity += prod.quantity;
+        found = true;
+      }
+    }
+    if (!found) {
+      newCart.push(prod);
+    }
+
+    setCart(newCart);
   };
 
   const removeProd = () => {

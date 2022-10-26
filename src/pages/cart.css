@@ -1,7 +1,28 @@
+
+
+
 .header{
     text-align: center;
 }
+img{
+    width: 100px;
+    height: 100px; 
+}
+.inner-cart{
+    display: flex;
 
-.cart h5.header{
+}
+.products{
+    flex: 3;
+    padding: 10px;
+    border: 1px solid black;
+    margin: 10px;
 
+}
+.total{
+    flex: 1;
+    padding: 10px;
+    border: 1px solid black;  
+    margin: 10px;
+  
 }

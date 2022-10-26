@@ -6,6 +6,16 @@ import { Link } from "react-router-dom";
 function NavBar() {
   const user = useContext(StoreContext).user;
   const cart = useContext(StoreContext).cart;
+
+  const getCartCount = () => {
+    let count = 0;
+    for (let i = 0; i < cart.length; i++) {
+      count += cart[i].quantity;
+    }
+
+    return count;
+  };
+
   return (
     <nav className="navbar navbar-expand-lg bg-dark">
       <div className="container-fluid">
@@ -58,7 +68,7 @@ function NavBar() {
           </ul>
           <form className="d-flex" role="search">
             <Link className="btn btn-outline-light" to="/cart">
-              <span className="badge text-bg-danger">{cart.length}</span>
+              <span className="badge text-bg-danger">{getCartCount()}</span>
               View
               <i class="fa fa-shopping-cart" aria-hidden="true"></i>
             </Link>

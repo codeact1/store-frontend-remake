@@ -50,10 +50,9 @@ const Admin = () => {
   return (
     <div className="admin">
       <h1>Admin Page</h1>
-
-      <div className="products">
-        <section className="sec-products">
-          <h1>Products</h1>
+      <div className="container">
+        <div className="products">
+          <h2>Products</h2>
           <div className="form-group">
             <div className="my-control">
               <label>Title:</label>
@@ -86,12 +85,12 @@ const Admin = () => {
               </ul>
             </div>
           </div>
-        </section>
+        </div>
       </div>
 
       <div className="discounts">
         <section className="sec-discounts">
-          <h1>Discounts</h1>
+          <h3>Discounts</h3>
           <div>
             <label>Code:</label>
             <input name="code" onChange={handleCouponChange} type="text" />
