@@ -70,7 +70,7 @@ function NavBar() {
             <Link className="btn btn-outline-light" to="/cart">
               <span className="badge text-bg-danger">{getCartCount()}</span>
               View
-              <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+              <i className="fa fa-shopping-cart" aria-hidden="true"></i>
             </Link>
 
             <label>{user.name}</label>

@@ -1,5 +1,7 @@
 import { useState } from "react";
 import "./admin.css";
+import Dataservice from "../services/dataService";
+import { useEffect } from "react";
 
 const Admin = () => {
   const [coupon, setCoupon] = useState({});
@@ -7,6 +9,23 @@ const Admin = () => {
 
   const [product, setProduct] = useState({});
   const [allProducts, setAllProducts] = useState([]);
+
+  useEffect(() => {
+    loadCoupons();
+    loadProducts();
+  }, []);
+
+  const loadProducts = async () => {
+    let service = new Dataservice();
+    let list = await service.getCatalog();
+    setAllProducts(list);
+  };
+
+  const loadCoupons = async () => {
+    let service = new Dataservice();
+    let list = await service.getCoupons();
+    setAllCoupons(list);
+  };
 
   const handleProductChange = (evt) => {
     const text = evt.target.value;
@@ -17,9 +36,14 @@ const Admin = () => {
     setProduct(copy);
   };
 
-  const saveProduct = () => {
+  const saveProduct = async () => {
     let copy = { ...product };
     copy.price = parseFloat(copy.price);
+
+    //save the product on server
+    let service = new Dataservice();
+    let prod = await service.saveProduct(copy);
+    console.log(prod);
 
     let productList = [...allProducts];
     productList.push(copy);
@@ -35,10 +59,17 @@ const Admin = () => {
     setCoupon(copy);
   };
 
-  const saveCoupon = () => {
+  const saveCoupon = async () => {
     // fix discount to be a number
     let copy = { ...coupon };
     copy.discount = parseFloat(copy.discount);
+
+    //send to server
+    let service = new Dataservice();
+    let c = await service.saveCoupon(copy);
+    console.log(c);
+
+    // add to list
 
     let couponList = [...allCoupons];
     couponList.push(copy);
@@ -97,8 +128,8 @@ const Admin = () => {
             </div>
           </div>
           <ul>
-            {allCoupons.map((c) => (
-              <li key={c.code}>
+            {allCoupons.map((c, index) => (
+              <li key={index}>
                 {c.code} - {c.discount}
               </li>
             ))}

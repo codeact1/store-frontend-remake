@@ -11,17 +11,21 @@ const Catalog = () => {
   //use effect
   // to do something when the component its loaded
   useEffect(() => {
-    let service = new Dataservice();
-    let result = service.getCatalog();
-    setProducts(result);
+    loadData();
   }, []);
+
+  const loadData = async () => {
+    let service = new Dataservice();
+    let result = await service.getCatalog();
+    setProducts(result);
+  };
 
   return (
     <div className="catalog">
       <h1>Next Level Equipment for Next Level Workout</h1>
       <div className="list-container">
-        {products.map((prod) => (
-          <Product key={prod.id} data={prod} />
+        {products.map((prod, index) => (
+          <Product key={index} data={prod} />
         ))}
       </div>
       <Wishlist />
