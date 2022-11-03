@@ -15,12 +15,14 @@
 .products{
     flex: 3;
     padding: 10px;
+    height: auto;
     border: 1px solid black;
     margin: 10px;
 
 }
 .total{
     flex: 1;
+    height: auto;
     padding: 10px;
     border: 1px solid black;  
     margin: 10px;
